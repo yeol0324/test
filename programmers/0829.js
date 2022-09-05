@@ -63,6 +63,69 @@ function solution(survey, choices) {
   answer += obj.get("C") >= obj.get("F") ? "C" : "F";
   answer += obj.get("J") >= obj.get("M") ? "J" : "M";
   answer += obj.get("A") >= obj.get("N") ? "A" : "N";
-  console.log(answer);
+  return answer;
+}
+
+// 해시 - 베스트앨범
+let genres1 = ["a", "b", "b", "c", "c"];
+let plays1 = [30, 40, 40, 5, 5];
+solution2(genres1, plays1);
+// function solution2(genres, plays) {
+//   let obj = new Map();
+//   let arr = [];
+//   genres.forEach((e, i) => {
+//     obj.set(e, obj.get(e) ? obj.get(e) + plays[i] : 0 + plays[i]);
+//     arr.push([e + i, plays[i]]);
+//   });
+//   let obj2 = Array.from(obj);
+//   var answer = [];
+
+//   obj2.sort((a, b) => b[1] - a[1]);
+//   arr.sort((a, b) => b[1] - a[1]);
+//   console.log(obj2);
+//   console.log(arr);
+//   obj2.forEach((e) => {
+//     let result = 0;
+//     arr.forEach((x) => {
+//       if (x[0].indexOf(e[0]) >= 0 && result < 2) {
+//         result += 1;
+//         answer.push(Number(x[0][x[0].length - 1]));
+//       }
+//     });
+//   });
+//   console.log(answer);
+//   return answer;
+// }
+function solution2(genres, plays) {
+  let obj = {};
+  let arr = [];
+  let answer;
+  genres.forEach((e, i) => {
+    if (!obj[e]) obj[e] = [];
+    let info = {
+      e,
+      play: plays[i],
+      index: i,
+    };
+    obj[e].push(info);
+  });
+  console.log(obj);
+  // let obj2 = Array.from(obj);
+  // var answer = [];
+
+  // obj2.sort((a, b) => b[1] - a[1]);
+  // arr.sort((a, b) => b[1] - a[1]);
+  // console.log(obj2);
+  // console.log(arr);
+  // obj2.forEach((e) => {
+  //   let result = 0;
+  //   arr.forEach((x) => {
+  //     if (x[0].indexOf(e[0]) >= 0 && result < 2) {
+  //       result += 1;
+  //       answer.push(Number(x[0][x[0].length - 1]));
+  //     }
+  //   });
+  // });
+  // console.log(answer);
   return answer;
 }
