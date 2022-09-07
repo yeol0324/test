@@ -1,0 +1,13 @@
+.border-box {
+  border: 1px solid #ddd;
+}
+.grid {
+  display: grid;
+  gap: 10px;
+  & .grid2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+& .grid4 {
+  grid-template-columns: repeat(4, 1fr);
+}

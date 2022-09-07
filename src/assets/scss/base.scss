@@ -1,0 +1,15 @@
+/* 초기화 */
+
+html { box-sizing: border-box; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; user-select: none; text-size-adjust: none; }
+*,*:before,*:after { box-sizing: border-box; outline: none; line-height: 1.2; }
+body { margin: 0; padding: 0; font-family: "nts", sans-serif; font-weight: 400; font-style: normal; color: $fontColor3; }
+ul,ol,li,dl,dt,dd { margin: 0; padding: 0; list-style: none; }
+p,h1,h2,h3,h4,h5,h6 { margin: 0; padding: 0; }
+a { font-size: 1rem; text-decoration: none; color: inherit; cursor: pointer; }
+img { border: 0; vertical-align: middle; font-size: 0; }
+table { border-collapse: collapse; border-spacing: 0; width: 100%; }
+select,input[type="text"],input[type="password"],input[type="number"],textarea { background: $inputColorBg; border: none; appearance: none; -webkit-appearance: none; color: $fontColor3; font-size: 1.2rem; font-family: $mainFont; }
+select { padding: 8px 40px 8px 10px;/*  background: url('~static/images/mobile/common/triangle.png') no-repeat 92% 48%;*/
+  background-size: 12px; }
+select,input { vertical-align: middle; }
+select::-ms-expand { display: none; }

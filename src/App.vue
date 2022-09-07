@@ -1,13 +1,12 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/test">test</router-link>
-  </nav>
-  <router-view />
+  <router-link :to="{ name: 'home' }">❌</router-link>
+  <router-view></router-view>
 </template>
 
 <style>
+@import "./assets/scss/base.scss";
+@import "./assets/scss/common.scss";
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,7 +14,10 @@
   text-align: center;
   color: #2c3e50;
 }
-
+a {
+  font-size: 30px;
+  text-decoration: none;
+}
 nav {
   padding: 30px;
 }
@@ -23,9 +25,11 @@ nav {
 nav a {
   font-weight: bold;
   color: #2c3e50;
+  font-size: 16px;
 }
 
 nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
+<script lang="ts" setup></script>

@@ -11,24 +11,6 @@
     :disabled-dates="{ start: new Date(), end: null }"
     disable-page-swipe
   >
-    <template v-slot:day-content="{ day, attributes }">
-      <div
-        class="h-full z-10 overflow-hidden"
-        :class="{ disabled: day.isDisabled }"
-      >
-        <span class="day-label">{{ day.day }}</span>
-        <div class="">
-          <p
-            v-for="attr in attributes"
-            :key="attr.key"
-            class="text-xs leading-tight rounded-sm p-1 mt-0 mb-1"
-            :class="attr.customData.class"
-          >
-            {{ attr.customData.title }}
-          </p>
-        </div>
-      </div>
-    </template>
   </Calendar>
 </template>
 <style lang="scss">
